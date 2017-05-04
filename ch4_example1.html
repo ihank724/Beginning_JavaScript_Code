@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 4, Example 1</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function convertToCent(degFahren) {
+        var degCent = (degFahren - 32) * 5 / 9;
+
+        return degCent;
+      }
+
+      var degFahren = [212, 32, -459.15];
+      var degCent = [];
+
+      for (var loopCounter in degFahren) {
+        if (degFahren.hasOwnProperty(loopCounter)) {
+           degCent[loopCounter] = convertToCent(degFahren[loopCounter]);
+           document.write("Value " + loopCounter + " was " + degFahren[loopCounter] + " degree Fahrenheit which is " + degCent[loopCounter] + " degree Centigrade.<br>");
+        }
+      }
+
+      // Alternative method by using for loop
+      // for (var i = 0; i < degFahren.length; i++) {
+      //   degCent[i] = convertToCent(degFahren[i]);
+      //   document.write("Value " + i + " was " + degFahren[i] + " degree Fahrenheit which is " + degCent[i] + " degree Centigrade.<br>");
+      // }
+    </script>
+  </body>
+</html>

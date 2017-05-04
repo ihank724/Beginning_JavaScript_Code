@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function timesTable() {
+        do {
+          var timesNum = prompt("Please enter the times number", "");
+        } while (isNaN(timesNum));
+        if (timesNum == -1) {
+          document.write("Thanks for playing the game. The programm is exited.")
+        } else {
+          do {
+            var startingNum = prompt("Please enter the starting number", "");
+          } while (isNaN(startingNum));
+          do {
+            var endingNum = prompt("Please enter the ending number", "");
+          } while (isNaN(endingNum));
+
+          for (var i = parseInt(startingNum); i <= parseInt(endingNum); i++){
+            document.write(timesNum + " * " + i + " = " + timesNum * i + "<br>");
+          }
+        }
+      }
+
+      timesTable();
+    </script>
+  </body>
+</html>
