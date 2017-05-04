@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 5, Example 1</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var myString = "Welcome to Wrox books. The Wrox website is www.wrox.com. Visit the Wrox website today. Thanks for buying Wrox";
+
+      var wroxCount = 0;
+      var foundAtPosition = 0;
+
+      while (foundAtPosition != -1) {
+        foundAtPosition = myString.indexOf("Wrox", foundAtPosition);
+
+        if (foundAtPosition != -1) {
+          foundAtPosition++;
+          wroxCount++;
+        }
+      }
+
+      document.write("There are " + wroxCount + " occurrences of the word Wrox.")
+      //mistakes made while coding this example:
+      // 1. "wroxCount" was spelled as "wroxCount"
+      // 2. "foundAtPosition != -1" was written as "foundAtPosition != 1"
+    </script>
+  </body>
+</html>

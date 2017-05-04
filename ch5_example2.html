@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var myString = prompt("Please enter your string.", "Hello World")
+
+      function checkChar(charToCheck) {
+        var returnValue;
+
+        if (charToCheck.charCodeAt(0) >= "A".charCodeAt(0) && charToCheck.charCodeAt(0) <= "Z".charCodeAt(0)) {
+          returnValue = "U";
+        } else if (charToCheck.charCodeAt(0) >= "a".charCodeAt(0) && charToCheck.charCodeAt(0) <= "z".charCodeAt(0)) {
+          returnValue = "L";
+        } else if (charToCheck.charCodeAt(0) >= "0".charCodeAt(0) && charToCheck.charCodeAt(0) <= "9".charCodeAt(0)) {
+          returnValue = "N";
+        } else {
+          returnValue = "O";
+        }
+
+        return returnValue;
+      }
+
+      switch (checkChar(myString)) {
+        case "U":
+          document.write("The first chatacter of the string was uppercase.")
+          break;
+        case "L":
+          document.write("The first chatacter of the string was lowercase.")
+          break;
+        case "N":
+          document.write("The first chatacter of the string was a number.")
+          break;
+        default:
+          document.write("The first character of the string was a symbol.")
+      }
+    </script>
+  </body>
+</html>

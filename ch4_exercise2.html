@@ -6,27 +6,28 @@
   </head>
   <body>
     <script type="text/javascript">
-      function timesTable() {
-        do {
-          var timesNum = prompt("Please enter the times number", "");
-        } while (isNaN(timesNum));
-        if (timesNum == -1) {
-          document.write("Thanks for playing the game. The programm is exited.")
-        } else {
-          do {
-            var startingNum = prompt("Please enter the starting number", "");
-          } while (isNaN(startingNum));
-          do {
-            var endingNum = prompt("Please enter the ending number", "");
-          } while (isNaN(endingNum));
-
-          for (var i = parseInt(startingNum); i <= parseInt(endingNum); i++){
-            document.write(timesNum + " * " + i + " = " + timesNum * i + "<br>");
-          }
+      function writeTimesTable(timesTable, startingNum, endingNum) {
+        for (var i = startingNum; i <= endingNum; i++) {
+          document.write(timesTable + " * " + i + " = " + timesTable * i + "<br>");
         }
       }
 
-      timesTable();
+      var timesNum;
+      while ((timesNum = prompt("Please enter times table number", "-1")) != -1) {
+        while (isNaN(timesNum) == true) {
+          timesNum = prompt("Please enter a valid number");
+        }
+        var startingNum = prompt("Please enter a starting number");
+        while (isNaN(startingNum) == true) {
+          startingNum = prompt("Please enter a valid starting number")
+        }
+        var endingNum = prompt("Please enter a ending number");
+        while (isNaN(endingNum) == true) {
+          endingNum = prompt("Please enter a valid ending number")
+        }
+
+        writeTimesTable(timesNum, startingNum, endingNum);
+      }
     </script>
   </body>
 </html>
