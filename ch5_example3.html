@@ -10,14 +10,17 @@
       var ord = prompt("Enter 1 for alphabetical order, -1 for reverse order", 1);
 
       if (ord == 1) {
-        for (var i = 0; i < myShoppingList.length; i++) {
-          myShoppingList.sort();
-          document.write(myShoppingList[i] + "<br>");
-        }
+        myShoppingList.sort();
+        document.write(myShoppingList.join("<br />"));
+        // or here for loop can be used as below
+        // for (var i = 0; i < myShoppingList.length; i++) {
+        //   myShoppingList.sort();
+        //   document.write(myShoppingList[i] + "<br>");
+        // }
       } else if (ord == -1) {
         for (var i = 0; i < myShoppingList.length; i++) {
-          myShoppingList.sort();
-          myShoppingList.reverse();
+          myShoppingList.sort().reverse();
+          // myShoppingList.reverse();
           document.write(myShoppingList[i] + "<br>");
         }
       } else {
