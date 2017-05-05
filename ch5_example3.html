@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Chapter 5, Example 3</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var myShoppingList = ["Eggs", "Milk", "Potatoes", "Cereal", "Banana"];
+      var ord = prompt("Enter 1 for alphabetical order, -1 for reverse order", 1);
+
+      if (ord == 1) {
+        for (var i = 0; i < myShoppingList.length; i++) {
+          myShoppingList.sort();
+          document.write(myShoppingList[i] + "<br>");
+        }
+      } else if (ord == -1) {
+        for (var i = 0; i < myShoppingList.length; i++) {
+          myShoppingList.sort();
+          myShoppingList.reverse();
+          document.write(myShoppingList[i] + "<br>");
+        }
+      } else {
+        document.write("Your input is not valid.")
+      }
+
+    </script>
+  </body>
+</html>
